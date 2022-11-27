@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="./mobile.css">
+    <title>Commenting system</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="header"></div>
+        <div class="wrapper">
+            <div class="sidebar"></div>
+            <section class="content">
+                <div class="grid-wrapper">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="mobile-div"></div>
+                    <div class="mobile-div"></div>
+                </div>
+                <div class="rectangle"></div>
+                <div class="rect-thin"></div>
+                <div class="menu">
+                    <div class="comment-page">
+
+                        <a id="comment-page">Комментарии<span id="comment-number"> 0 </span></a>
+
+                    </div>
+                    <select title="list" id="rate">
+                        <option class="rate-value" value="1">По дате</option>
+                        <option selected class="rate-value" value="2">По количеству оценок</option>
+                        <option class="rate-value" value="3">По актуальности</option>
+                        <option class="rate-value" value="4">По количеству ответов</option>
+                    </select>
+                    <svg class="arrow btn-magic" width="18" height="15" viewBox="0 0 18 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path class="path" opacity="0.4" d="M9 15L17.6603 0H0.339746L9 15Z" fill="black" />
+                    </svg>
+                    <div class="favorite">
+                        <div class="favorite-name">Избранное</div>
+                        <img class="like" src="./images/like_page.jpg" width="21" height="21" alt="like sign">
+                    </div>
+
+                </div>
+
+
+                <form action="" id="commentsReplies" onsubmit="return false">
+                    <fieldset class="formwarpper" name='post'>
+                        <div id="avatar">
+                            <img id="avatar-img" src="./images/avatar_alex.png" alt="avatar">
+                        </div>
+                        <div class="comment-header">
+                            <div class="input-name">
+                                <input name="nameInput" id="name" placeholder="Ваше имя" type="text">
+                                <div id="count">Макс. 1000 символов </div>
+                            </div>
+                            <textarea class="comment-input" placeholder="Введите текст сообщения..."
+                                name="write_comment" id="text" cols="40" rows="10"></textarea>
+                        </div>
+                        <div class="send-form">
+                            <span id="error-msg"></span>
+                            <button class="send-btn" title="button" type="button">Отправить</button>
+                            <span id="error-msg__mobile"></span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="comment-output" name="comments">
+
+                    </fieldset>
+                </form>
+
+            </section>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
